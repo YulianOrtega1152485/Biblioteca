@@ -11,7 +11,7 @@ class Libro(models.Model):
     ISBN=models.CharField(max_length=17,null=True,blank=True,unique=True)
     categoria=models.ForeignKey(Categoria,on_delete=models.PROTECT,related_name='Libros',null=False,blank=False)
     autores= models.ManyToManyField(Autor,related_name='libros')
-
+    idioma=models.CharField(max_length=20,null=False,blank=False)
     class Meta:
          constraints = [
             models.CheckConstraint(condition=Q(año_publicacion__gte=1000),name='check_anio_publicacion_minimo'),
