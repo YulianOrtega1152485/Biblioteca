@@ -1,5 +1,3 @@
 db.sqlite3
 __pycache__/
-*.py[cod]
 
-config/__pycache__/settings.cpython-314.pyc
