@@ -12,4 +12,4 @@ class Libro_admin(admin.ModelAdmin):
     list_display=('titulo','año_publicacion','idioma','categoria')
     search_fields=('titulo','ISBN')
     list_editable=('idioma',)
-    inline=[Copia_fisica_inline]
+    inlines=[Copia_fisica_inline]
